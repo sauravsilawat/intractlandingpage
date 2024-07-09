@@ -1,0 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  color: #D1D5DB; /* text-gray-300 */
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #FFFFFF; /* text-white */
+}
+
+.thin-separator {
+  height: 0.1px;
+}
