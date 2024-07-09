@@ -15,3 +15,12 @@
 .thin-separator {
   height: 0.1px;
 }
+
+.timer {
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

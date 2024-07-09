@@ -7,6 +7,7 @@ import airdrop from '../asset/image/airdrops.png';
 import communitypng from '../asset/image/exclusiveCommunity.gif';
 import cat from '../asset/image/cat.png';
 import cat2 from '../asset/image/cat2.png';
+import CountdownTimer from '../component/CountdownTimer';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faCaretDown, faLock, faClock, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
@@ -36,7 +37,7 @@ export default function Hero() {
                     </button>
                 </div>
             </section>
-            <section className='mb-[1700px] w-full'>
+            <section className='mb-[1800px] w-full'>
                 <div className='flex items-center ml-20'>
                     <img src={svg0} className='w-[120px] h-[20px]' alt="svg" />
                     <div className='flex relative h-[230px] w-[34%] rounded-3xl cursor-pointer bg-[#2a29298e] text-white'>
@@ -123,7 +124,9 @@ export default function Hero() {
                                 <FontAwesomeIcon icon={faClock} size='1px' color='yellow' />
                                 <p>Rewards unlocks in</p>
                             </div>
-                            <div></div>
+                            <div className='bg-black mt-4 py-2 rounded-lg'>
+                                <CountdownTimer />
+                            </div>
                         </section>
                         <section className='bg-[#7773734a] text-gray-400 rounded-xl mb-10 py-4 px-3'>
                             <img src={communitypng} alt="gif" />
