@@ -22,7 +22,7 @@ import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 export default function Hero() {
     return (
-        <div>
+        <div className='overflow-x-hidden'>
             <section className='relative flex justify-center items-center'>
                 <img className='z-0' src={bgImg} alt="gif" />
                 <div className='flex absolute flex-col gap-8 justify-center items-center z-20' >
