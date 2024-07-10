@@ -30,10 +30,6 @@ export default function CryptoDic() {
                     </div>
                 </div>
             </div>
-            <div className='bg-[#1a1a1a82] mt-10 rounded-full'>
-                <button className={`font-semibold px-8 py-2 rounded-full bg-[#4040407f]`}>Essentials</button>
-                <button className={`font-semibold px-8 py-2 rounded-full`}>Alpha Hub</button>
-            </div>
         </div>
     );
 }

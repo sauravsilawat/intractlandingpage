@@ -2,6 +2,7 @@ import React from 'react'
 import Seperator from '../component/Seperator'
 import CryptoDic from '../component/CryptoDic'
 import CryptoCreator from '../component/CryptoCreator'
+import StickyButton from '../component/StickyButton'
 import Footer from '../component/Footer'
 
 export default function Bottom() {
@@ -11,8 +12,6 @@ export default function Bottom() {
             <CryptoCreator />
             <Seperator />
             <CryptoDic />
-            <Seperator />
-            <Footer />
         </div>
     )
 }

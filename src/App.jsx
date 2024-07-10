@@ -2,6 +2,9 @@ import './App.css'
 import Header from './section/Header'
 import Hero from './section/Hero'
 import Bottom from './section/Bottom'
+import StickyButton from './component/StickyButton'
+import Seperator from './component/Seperator'
+import Footer from './component/Footer'
 
 function App() {
 
@@ -11,6 +14,11 @@ function App() {
         <Header />
         <Hero />
         <Bottom />
+        <div className='sticky bottom-10'>
+          <StickyButton />
+        </div>
+        <Seperator />
+        <Footer />
       </div>
     </>
   )
