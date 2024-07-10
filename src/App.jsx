@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Hero />
         <Bottom />
-        <div className='sticky bottom-10'>
+        <div className='sticky bottom-10 z-50-'>
           <StickyButton />
         </div>
         <Seperator />

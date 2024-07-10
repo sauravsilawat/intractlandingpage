@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DropDown from '../component/DropDown';
 import academyLogo from '../asset/image/academyLogo.gif'
 import bgImg from '../asset/image/bgImg.png'
@@ -8,6 +8,7 @@ import communitypng from '../asset/image/exclusiveCommunity.gif';
 import cat from '../asset/image/cat.png';
 import cat2 from '../asset/image/cat2.png';
 import CountdownTimer from '../component/CountdownTimer';
+import { basicOfCrypto, airDropData } from '../asset/constant/data';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faCaretDown, faLock, faClock, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +22,8 @@ import coin from '../asset/icon/coin.svg'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 export default function Hero() {
+    const [airData, setAirdata] = useState(true);
+    const [basicData, setBasicdata] = useState(true);
     return (
         <div className='overflow-x-hidden'>
             <section className='relative flex justify-center items-center'>
@@ -40,7 +43,7 @@ export default function Hero() {
             <section className='mb-[1800px] w-full'>
                 <div className='flex items-center ml-20'>
                     <img src={svg0} className='w-[120px] h-[20px]' alt="svg" />
-                    <div className='flex relative h-[230px] w-[34%] rounded-3xl cursor-pointer bg-[#2a29298e] text-white'>
+                    <div onClick={()=>setBasicdata(!basicData)} className={`flex relative  h-[230px] w-[34%] cursor-pointer bg-[#2a29298e] text-white ${!basicData?"rounded-3xl":"rounded-t-3xl"}`}>
                         <div className='absolute right-8 top-4'>
                             <FontAwesomeIcon icon={faCaretDown} size='1px' color='#d1d5db' />
                         </div>
@@ -58,10 +61,13 @@ export default function Hero() {
                                 <p>1490 XPs</p>
                             </div>
                         </div>
+                        {basicData && <div className='bg-[#191818b7] z-30 overflow-y-scroll rounded-b-3xl w-full h-[300px] absolute top-[230px]'>
+                            <DropDown data={basicOfCrypto} />
+                        </div>}
                     </div>
                 </div>
                 <div className='flex relative justify-center mt-[-40px]'>
-                    <img src={svg1} alt="svg" />
+                    <img src={svg1} className='z-0' alt="svg" />
                     <div className='absolute text-white z-50 flex h-[300px] w-[200px] right-60'>
                         <div className='relative flex justify-center items-center mx-6'>
                             <div className='w-[150px] h-[180px] bg-[#423f3f8e] border-[#7773738e] border-[1px] p-2 rounded-2xl'>
@@ -80,7 +86,7 @@ export default function Hero() {
                     </div>
                     <img src={svg2} className='absolute right-[-130px] top-44' alt="svg" />
                     <div className='absolute w-[34%] h-full right-[400px] top-[490px]'>
-                        <div className='flex relative h-[230px] rounded-3xl cursor-pointer bg-[#2a29298e] text-white'>
+                        <div onClick={()=> setAirdata(!airData)} className={`flex relative h-[230px] cursor-pointer bg-[#2a29298e] text-white ${!airData?"rounded-3xl":'rounded-t-3xl'}`}>
                             <div className='absolute right-8 top-4'>
                                 <FontAwesomeIcon icon={faCaretDown} size='1px' color='#d1d5db' />
                             </div>
@@ -98,6 +104,9 @@ export default function Hero() {
                                     <p>1040 XPs</p>
                                 </div>
                             </div>
+                            {airData && <div className='bg-[#191818b7] z-30 overflow-y-scroll rounded-b-3xl w-full h-[300px] absolute top-[230px]'>
+                                <DropDown data={airDropData} />
+                            </div>}
                         </div>
                     </div>
                     <img src={svg3} className='absolute top-[510px] left-[350px]' alt="svg" />

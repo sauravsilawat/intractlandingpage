@@ -36,8 +36,8 @@ export default function Footer() {
         <Seperator />
       </div>
 
-      <div className='flex items-center justify-between w-[82%] m-auto'>
-        <h1 className='font-medium'>CREATED BY <span className=' underline'>INTRACT</span></h1>
+      <div className='flex items-center justify-between pb-10 w-[82%] m-auto'>
+        <h1 className='font-medium text-white'>CREATED BY <span className=' underline'>INTRACT</span></h1>
         <div className='flex gap-4'>
           <a className='w-10 h-10 rounded-lg flex items-center justify-center bg-[#1a1a1a]' href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon color='#1DA1F2' icon={faTwitter} size="1x" />
